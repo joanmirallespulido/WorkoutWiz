@@ -3,7 +3,7 @@ import { Box, Typography, Paper, IconButton, CircularProgress, Grid } from "@mui
 import { ArrowBackIos, Delete, Edit } from '@mui/icons-material';
 import { useParams, Link as RouterLink } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-
+// test
 export const TrainingPage = () => {
     const { id: routineId } = useParams();
     const userId = useSelector(state => state.auth.uid);
@@ -47,11 +47,11 @@ export const TrainingPage = () => {
 
             {routineDetails && (
                 <Grid container alignItems="center" justifyContent="center" sx={{
-                    position: 'relative', 
-                    top: 16, 
-                    width: '70%', 
+                    position: 'relative',
+                    top: 16,
+                    width: '70%',
                     textAlign: 'center',
-                    mb:4
+                    mb: 4
                 }}>
                     <Grid item>
                         <Typography variant="h4" sx={{ color: 'white' }}>
@@ -67,20 +67,20 @@ export const TrainingPage = () => {
             )}
 
             {routineDetails && routineDetails.days.map((day, index) => (
-                <Paper 
-                className="animate__animated animate__fadeIn"
-                key={index} elevation={3} sx={{
-                    mt: 2,
-                    mb: 2,
-                    p: 4,
-                    backgroundColor: 'rgba(0, 0, 0, 0.4)',
-                    color: 'white',
-                    width: '100%',
-                    maxWidth: '600px',
-                    borderRadius: '12px',
-                    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                    background: 'linear-gradient(145deg, rgba(23, 23, 23, 0.8), rgba(35, 35, 35, 0.2))'
-                }}>
+                <Paper
+                    className="animate__animated animate__fadeIn"
+                    key={index} elevation={3} sx={{
+                        mt: 2,
+                        mb: 2,
+                        p: 4,
+                        backgroundColor: 'rgba(0, 0, 0, 0.4)',
+                        color: 'white',
+                        width: '100%',
+                        maxWidth: '600px',
+                        borderRadius: '12px',
+                        boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                        background: 'linear-gradient(145deg, rgba(23, 23, 23, 0.8), rgba(35, 35, 35, 0.2))'
+                    }}>
                     <Typography variant="h6" gutterBottom>
                         {day.resumen_dia}
                     </Typography>
